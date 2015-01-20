@@ -1,5 +1,4 @@
-
-
+	console.log("hola");
 // @codekit-prepend "vendor/modernizr.js";
 // @codekit-prepend "vendor/polyfiller.js";
 // @codekit-prepend "vendor/picturefill.min.js";
