@@ -4,8 +4,15 @@
 		<title>Pattern Lab</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width" />
+	
+		<link rel="stylesheet" href="../../css/style.css?1423053839" media="all" />
 		
-		<link rel="stylesheet" href="../../css/style.css?1421607810" media="all" />
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="../../js/jquery-1.11.1.min.js">\x3C/script>')</script>
+		<script type="text/javascript" src="../../js/core-min.js"></script>
+		
+	    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/webfont/1.0.19/webfont.js" ></script>
 
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
 				<!-- never cache patterns -->
@@ -15,8 +22,8 @@
 		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 		<meta http-equiv="pragma" content="no-cache" />
 		
-		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1421607810" media="all">
-		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1421607810" media="all" />
+		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1423053839" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1423053839" media="all" />
 		
 
 		<!-- End Pattern Lab -->
@@ -32,11 +39,13 @@
 					<div id="molecules-primary-nav" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/01-molecules-05-navigation-00-primary-nav/01-molecules-05-navigation-00-primary-nav.html" class="patternLink" data-patternpartial="molecules-primary-nav">Primary Nav</a></h2>
 						<div class="sg-pattern-body">
-							<nav id="nav" class="nav">
+							<nav id="nav" class="nav nav--header">
 	<ul class="nav-list">
-		<li><a href="#">Home</a></li>
-		<li><a href="#">About</a></li>
-		<li><a href="#">Blog</a></li>
+		<li><a class="active" href="#">Home</a></li>
+		<li><a href="#">Work</a></li>
+		<li><a href="#">Services</a></li>
+		<li><a href="#">Team</a></li>
+		<li><a href="#">Clients</a></li>
 		<li><a href="#">Contact</a></li>
 	</ul>
 </nav><!--end .nav-->
@@ -45,11 +54,13 @@
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;nav id=&quot;nav&quot; class=&quot;nav&quot;&gt;
+										&lt;nav id=&quot;nav&quot; class=&quot;nav nav--header&quot;&gt;
 	&lt;ul class=&quot;nav-list&quot;&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a class=&quot;active&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Work&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Team&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Clients&lt;/a&gt;&lt;/li&gt;
 		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
 	&lt;/ul&gt;
 &lt;/nav&gt;&lt;!--end .nav--&gt;
@@ -63,20 +74,24 @@
 						<h2 class="sg-pattern-head" ><a href="../../patterns/01-molecules-05-navigation-01-footer-nav/01-molecules-05-navigation-01-footer-nav.html" class="patternLink" data-patternpartial="molecules-footer-nav">Footer Nav</a></h2>
 						<div class="sg-pattern-body">
 							<ul class="nav-footer">
-	<li><a href="#">Home</a></li>
-	<li><a href="#">About</a></li>
-	<li><a href="#">Blog</a></li>
-	<li><a href="#">Contact</a></li>
+	<li><a href="#">Facebook</a></li>
+	<li><a href="#">Twitter</a></li>
+	<li><a href="#">LinkeIn</a></li>
+	<li><a href="#">Google+</a></li>
+	<li><a href="#">Pinterest</a></li>
+	<li><a href="#">Instagram</a></li>
 </ul>
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
 										&lt;ul class=&quot;nav-footer&quot;&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;LinkeIn&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Google+&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Pinterest&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Instagram&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 									</code>
 								</pre>
@@ -210,10 +225,10 @@
 			
 		}
 	</script>
-	<script id="pl-js-polyfill-insert-1421607810">
+	<script id="pl-js-polyfill-insert-1423053839">
 		(function() {
 			if (self != top) {
-				var cb = '1421607810';
+				var cb = '1423053839';
 				var js = [];
 				if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
 					js.push("styleguide/js/vendor/classlist-polyfill.js");
@@ -222,10 +237,10 @@
 			}
 		})();
 	</script>
-	<script id="pl-js-insert-1421607810">
+	<script id="pl-js-insert-1423053839">
 		(function() {
 			if (self != top) {
-				var cb = '1421607810';
+				var cb = '1423053839';
 				var js = [ { "src": "styleguide/js/vendor/jwerty.js", "dep": [ "styleguide/js/postmessage.js", { "src": "data/annotations.js", "dep": [ "styleguide/js/annotations-pattern.js" ] }, "styleguide/js/code-pattern.js" ] } ];
 				scriptLoader.run(js,cb,'pl-js-insert');
 			}
@@ -233,6 +248,14 @@
 	</script>
 	
 
+
+	<script type="text/javascript">
+        WebFont.load({
+            monotype: {
+                projectId: '778c7547-94b1-4c2c-9b11-9e6e8dad5388'
+            }
+        });
+    </script>
 
 	</body>
 </html>
