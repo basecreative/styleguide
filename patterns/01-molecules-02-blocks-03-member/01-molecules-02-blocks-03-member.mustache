@@ -5,14 +5,8 @@
 		&lt;p class=&quot;member__role&quot;&gt;{{ member.role }}&lt;/p&gt;
 	&lt;/figcaption&gt;
 	&lt;div class=&quot;member__social&quot;&gt;
-		{{# member.social.twitter}}
-			&lt;a href=&quot;http://twitter.com/{{ member.social.twitter }}&quot; class=&quot;member__link icon icon--twitter&quot;&gt;&lt;span class=&quot;icon__text&quot;&gt;Twitter&lt;/span&gt;&lt;/a&gt;
-		{{/ member.social.twitter}}
-		{{# member.social.instagram}}
-			&lt;a href=&quot;http://instagram.com/{{ member.social.instagram }}&quot; class=&quot;member__link icon icon--instagram&quot;&gt;&lt;span class=&quot;icon__text&quot;&gt;Instagram&lt;/span&gt;&lt;/a&gt;
-		{{/ member.social.instagram}}
-		{{# member.social.facebook}}
-			&lt;a href=&quot;http://facebook.com/{{ member.social.facebook }}&quot; class=&quot;member__link icon icon--facebook&quot;&gt;&lt;span class=&quot;icon__text&quot;&gt;Facebook&lt;/span&gt;&lt;/a&gt;
-		{{/ member.social.facebook}}
+		{{# member.social }}
+			&lt;a href=&quot;{{ url }}/{{ handler }}&quot; class=&quot;member__link icon icon--{{ name }}&quot;&gt;&lt;span class=&quot;icon__text&quot;&gt;{{ name }}&lt;/span&gt;&lt;/a&gt;
+		{{/ member.social }}
 	&lt;/div&gt;
 &lt;/figure&gt;
