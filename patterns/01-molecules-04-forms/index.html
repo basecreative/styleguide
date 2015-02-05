@@ -29,22 +29,77 @@
 	
 	</head>
 	<body class="body">	
-		<picture>
-	<!--[if IE 9]><video style="display: none;"><![endif]-->
-	<source sizes="(min-width: 60em) 300px, (min-width: 48em) 33vw, (min-width: 40em) 50vw, 1px" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== 2w, //placehold.it/250x125 250w, //placehold.it/400x200 400w, //placehold.it/600x300 600w" media="(min-width: 40em)" />
-	<!--[if IE 9]></video><![endif]-->
-	<img/>
-</picture>
-	<!--DO NOT REMOVE-->
+				
+		<!-- View All Patterns in a Pattern Sub-Type -->
+		<div class="sg-main" role="main">
+			
+			<!-- Patterns -->
+			<div id="sg-patterns">
+					<div id="molecules-contact" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/01-molecules-04-forms-01-contact/01-molecules-04-forms-01-contact.html" class="patternLink" data-patternpartial="molecules-contact">Contact</a></h2>
+						<div class="sg-pattern-body">
+							<form method="post" action="#" class="contact-form">
+	<fieldset>
+		<div class="field-container">
+			<input type="text" placeholder="Name" />
+		</div>
+		<div class="field-container">
+			<input type="text" placeholder="Enquiry title" />
+		</div>
+		<div class="field-container">
+			<input type="email" placeholder="Email address" />
+		</div>
+		<div class="field-container">
+			<input type="text" pattern="[0-9]*" placeholder="Phone no." />
+		</div>
+		<div class="field-container">
+			<textarea rows="5" placeholder="Message"></textarea>
+		</div>
+	</fieldset>
+	<input type="submit" value="Send">
+</form>
+							<div class="sg-code" style="display: none">
+								<h3 class="sg-code-head">HTML</h3>
+								<pre class="sg-code-html">
+									<code>
+										&lt;form method=&quot;post&quot; action=&quot;#&quot; class=&quot;contact-form&quot;&gt;
+	&lt;fieldset&gt;
+		&lt;div class=&quot;field-container&quot;&gt;
+			&lt;input type=&quot;text&quot; placeholder=&quot;Name&quot; /&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;field-container&quot;&gt;
+			&lt;input type=&quot;text&quot; placeholder=&quot;Enquiry title&quot; /&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;field-container&quot;&gt;
+			&lt;input type=&quot;email&quot; placeholder=&quot;Email address&quot; /&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;field-container&quot;&gt;
+			&lt;input type=&quot;text&quot; pattern=&quot;[0-9]*&quot; placeholder=&quot;Phone no.&quot; /&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;field-container&quot;&gt;
+			&lt;textarea rows=&quot;5&quot; placeholder=&quot;Message&quot;&gt;&lt;/textarea&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+	&lt;input type=&quot;submit&quot; value=&quot;Send&quot;&gt;
+&lt;/form&gt;
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+			</div> <!--end #sg-patterns-->
+	
+		</div><!--end .sg-main-->
 		
-	<script>
-		// handle injection of items from PHP
-		var patternPartial = "atoms-portfolio-secondary";
-		var lineage        = [];
-		var lineageR       = [];
-		var patternState   = "";
-		var cssEnabled     = false;
-	</script>
+		<!-- JS to hook everything together and do annotations -->
+		<script>
+			// handle injection of items from PHP
+			var patternPartial = "viewall-molecules-forms";
+			var lineage = "";
+		</script>
+		
+
+	<!--DO NOT REMOVE-->
 		<script>
 		/*!
 		 * scriptLoader - v0.1

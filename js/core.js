@@ -2,6 +2,7 @@
 // @codekit-prepend "vendor/polyfiller.js";
 // @codekit-prepend "vendor/picturefill.min.js";
 // @codekit-prepend "vendor/respond.js";
+// @codekit-prepend "vendor/fixedfixed.js";
 
 $(function(){
 
