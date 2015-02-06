@@ -1,6 +1,11 @@
 &lt;!-- Begin .header --&gt;
 &lt;header class=&quot;header cf&quot; role=&quot;banner&quot;&gt;
-	{{&gt; atoms-logo }}
+	{{# logo--regular }}
+		{{&gt; atoms-logo }}
+	{{/ logo--regular }}
+	{{# logo--alt }}
+		{{&gt; atoms-logo-alt }}
+	{{/ logo--alt }}
 	&lt;a href=&quot;#nav&quot; class=&quot;nav-toggle nav-toggle-menu icon icon--menu&quot;&gt;&lt;span class=&quot;is-vishidden&quot;&gt;Menu&lt;/span&gt;&lt;/a&gt;
 	{{&gt; organisms-off-canvas }}
 &lt;/header&gt;
