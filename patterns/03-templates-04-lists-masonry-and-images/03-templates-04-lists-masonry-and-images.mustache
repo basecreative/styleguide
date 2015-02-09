@@ -1,0 +1,25 @@
+&lt;div class=&quot;page&quot; id=&quot;page&quot;&gt;
+	{{&gt; organisms-header }}
+	&lt;div role=&quot;main&quot;&gt;
+		{{&gt; molecules-heading-group }}
+		{{&gt; organisms-clients }}
+
+		&lt;section class=&quot;section lc--tight&quot;&gt;
+			&lt;div class=&quot;masonry&quot;&gt;
+				{{# clients }}
+					&lt;div class=&quot;item&quot;&gt;
+						&lt;div class=&quot;titled-list&quot;&gt;
+							&lt;h3 class=&quot;titled-list__title&quot;&gt;{{ category }}&lt;/h3&gt;
+							&lt;ul class=&quot;titled-list__list&quot;&gt;
+								{{# li }}
+									&lt;li&gt;{{ val }}&lt;/li&gt;
+								{{/ li }}
+							&lt;/ul&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				{{/ clients }}
+			&lt;/div&gt;
+		&lt;/section&gt;
+	&lt;/div&gt;
+	{{&gt; organisms-footer }}
+&lt;/div&gt;
