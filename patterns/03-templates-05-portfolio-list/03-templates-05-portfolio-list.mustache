@@ -2,7 +2,11 @@
 	{{&gt; organisms-header }}
 	&lt;div role=&quot;main&quot;&gt;
 		&lt;section class=&quot;section&quot;&gt;
-			{{&gt; organisms-portfolio-list }}
+			&lt;div class=&quot;project-list&quot;&gt;
+				{{# portfolio }}
+					{{&gt; molecules-portfolio-item }}
+				{{/ portfolio }}
+			&lt;/div&gt;
 		&lt;/section&gt;
 	&lt;/div&gt;
 	{{&gt; organisms-footer }}
