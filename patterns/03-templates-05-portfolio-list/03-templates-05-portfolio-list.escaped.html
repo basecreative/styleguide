@@ -27,13 +27,23 @@
 			&lt;li&gt;&lt;a href=&quot;../../patterns/04-pages-04-services/04-pages-04-services.html&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
 			&lt;li&gt;&lt;a href=&quot;../../patterns/04-pages-03-team/04-pages-03-team.html&quot;&gt;Team&lt;/a&gt;&lt;/li&gt;
 			&lt;li&gt;&lt;a href=&quot;../../patterns/04-pages-07-clients/04-pages-07-clients.html&quot;&gt;Clients&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;../../patterns/04-pages-08-contact/04-pages-08-contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
 		&lt;/ul&gt;
 	&lt;/nav&gt;&lt;!--end .nav--&gt;
 	&lt;/div&gt;	&lt;/header&gt;
 	&lt;!-- End .header --&gt;	&lt;div role=&quot;main&quot;&gt;
-		&lt;section class=&quot;section&quot;&gt;
+		&lt;div class=&quot;nav nav--category&quot;&gt;
+			&lt;ul class=&quot;nav-list&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; data-filter=&quot;*&quot;&gt;All&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; data-filter=&quot;app&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; data-filter=&quot;brand&quot;&gt;Brands&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; data-filter=&quot;print&quot;&gt;Print&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot; data-filter=&quot;website&quot;&gt;Websites&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;		&lt;section class=&quot;section&quot;&gt;
 			&lt;div class=&quot;project-list&quot;&gt;
+				&lt;div id=&quot;portfolio-filter&quot;&gt;
+				&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/section&gt;
 	&lt;/div&gt;
@@ -69,3 +79,47 @@
 		&lt;/div&gt;
 	&lt;/footer&gt;
 	&lt;!-- End Footer --&gt;&lt;/div&gt;
+
+&lt;script&gt;
+var container = document.querySelector('#portfolio-filter');
+// init
+var iso;
+imagesLoaded( container, function() {
+  	iso  = new Isotope( container, {
+		itemSelector: '.project',
+		layoutMode: 'fitRows'
+	});
+});
+
+// Get the filter menu
+var filters = document.querySelectorAll('.nav--category a');
+for(var i = 0; i &lt; filters.length; i++) {
+	// If there's an attribute
+	if(filters[i].getAttribute('data-filter')){
+
+		// Initial state
+		if(filters[i].getAttribute('data-filter') === &quot;*&quot;){
+			filters[i].classList.toggle('active');
+		}
+		// Add click event
+	    filters[i].addEventListener(&quot;click&quot;, function(e){
+	    	e.preventDefault();
+	    	var filter_selector = &quot;*&quot;;
+	    	if(this.getAttribute('data-filter') !== &quot;*&quot;) {
+	    		filter_selector = '.project--' + this.getAttribute('data-filter');
+	    	}
+	    	// Filter action
+	    	iso.arrange({
+	    		filter: filter_selector
+	    	});
+
+	    	// Active class on the filter
+	    	var refilter = document.querySelectorAll('.nav--category a')
+	    	for (var i = 0; i &lt; refilter.length; i++) {
+			  refilter[i].classList.remove('active');
+			}
+	    	this.classList.add('active');
+	    });
+	}
+}
+&lt;/script&gt;

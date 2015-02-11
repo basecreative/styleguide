@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html class="pl">
 	<head>
-		<title>Pattern Lab</title>
+		<title>Base Creative Pattern Lab</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width" />
 	
-		<link rel="stylesheet" href="../../css/style.css?1423564293" media="all" />
+		<link rel="stylesheet" href="../../css/style.css?1423658031" media="all" />
 		
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -21,8 +21,8 @@
 		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 		<meta http-equiv="pragma" content="no-cache" />
 		
-		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1423564293" media="all">
-		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1423564293" media="all" />
+		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1423658031" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1423658031" media="all" />
 		
 
 		<!-- End Pattern Lab -->
@@ -45,7 +45,7 @@
 		<li><a href="../../patterns/04-pages-04-services/04-pages-04-services.html">Services</a></li>
 		<li><a href="../../patterns/04-pages-03-team/04-pages-03-team.html">Team</a></li>
 		<li><a href="../../patterns/04-pages-07-clients/04-pages-07-clients.html">Clients</a></li>
-		<li><a href="">Contact</a></li>
+		<li><a href="../../patterns/04-pages-08-contact/04-pages-08-contact.html">Contact</a></li>
 	</ul>
 </nav><!--end .nav-->
 
@@ -60,7 +60,7 @@
 		&lt;li&gt;&lt;a href=&quot;../../patterns/04-pages-04-services/04-pages-04-services.html&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
 		&lt;li&gt;&lt;a href=&quot;../../patterns/04-pages-03-team/04-pages-03-team.html&quot;&gt;Team&lt;/a&gt;&lt;/li&gt;
 		&lt;li&gt;&lt;a href=&quot;../../patterns/04-pages-07-clients/04-pages-07-clients.html&quot;&gt;Clients&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;../../patterns/04-pages-08-contact/04-pages-08-contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
 	&lt;/ul&gt;
 &lt;/nav&gt;&lt;!--end .nav--&gt;
 
@@ -180,22 +180,26 @@
 					<div id="molecules-portfolio-nav" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/01-molecules-05-navigation-07-portfolio-nav/01-molecules-05-navigation-07-portfolio-nav.html" class="patternLink" data-patternpartial="molecules-portfolio-nav">Portfolio Nav</a></h2>
 						<div class="sg-pattern-body">
-							<div class="tabs">
-	<ul class="tab-list">
-		<li><a href="#" class="active">Tab 1</a></li>
-		<li><a href="#">Tab 2</a></li>
-		<li><a href="#">Tab 3</a></li>
+							<div class="nav nav--category">
+	<ul class="nav-list">
+		<li><a href="#" data-filter="*">All</a></li>
+		<li><a href="#" data-filter="app">Apps</a></li>
+		<li><a href="#" data-filter="brand">Brands</a></li>
+		<li><a href="#" data-filter="print">Print</a></li>
+		<li><a href="#" data-filter="website">Websites</a></li>
 	</ul>
 </div>
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;div class=&quot;tabs&quot;&gt;
-	&lt;ul class=&quot;tab-list&quot;&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+										&lt;div class=&quot;nav nav--category&quot;&gt;
+	&lt;ul class=&quot;nav-list&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot; data-filter=&quot;*&quot;&gt;All&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot; data-filter=&quot;app&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot; data-filter=&quot;brand&quot;&gt;Brands&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot; data-filter=&quot;print&quot;&gt;Print&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot; data-filter=&quot;website&quot;&gt;Websites&lt;/a&gt;&lt;/li&gt;
 	&lt;/ul&gt;
 &lt;/div&gt;
 									</code>
@@ -248,10 +252,10 @@
 			
 		}
 	</script>
-	<script id="pl-js-polyfill-insert-1423564293">
+	<script id="pl-js-polyfill-insert-1423658031">
 		(function() {
 			if (self != top) {
-				var cb = '1423564293';
+				var cb = '1423658031';
 				var js = [];
 				if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
 					js.push("styleguide/js/vendor/classlist-polyfill.js");
@@ -260,10 +264,10 @@
 			}
 		})();
 	</script>
-	<script id="pl-js-insert-1423564293">
+	<script id="pl-js-insert-1423658031">
 		(function() {
 			if (self != top) {
-				var cb = '1423564293';
+				var cb = '1423658031';
 				var js = [ { "src": "styleguide/js/vendor/jwerty.js", "dep": [ "styleguide/js/postmessage.js", { "src": "data/annotations.js", "dep": [ "styleguide/js/annotations-pattern.js" ] }, "styleguide/js/code-pattern.js" ] } ];
 				scriptLoader.run(js,cb,'pl-js-insert');
 			}

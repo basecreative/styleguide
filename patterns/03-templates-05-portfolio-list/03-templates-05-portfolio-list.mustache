@@ -1,13 +1,60 @@
 &lt;div class=&quot;page&quot; id=&quot;page&quot;&gt;
 	{{&gt; organisms-header }}
 	&lt;div role=&quot;main&quot;&gt;
+		{{&gt; molecules-portfolio-nav }}
 		&lt;section class=&quot;section&quot;&gt;
 			&lt;div class=&quot;project-list&quot;&gt;
-				{{# portfolio }}
-					{{&gt; molecules-portfolio-item }}
-				{{/ portfolio }}
+				&lt;div id=&quot;portfolio-filter&quot;&gt;
+					{{# portfolio }}
+						{{&gt; molecules-portfolio-item }}
+					{{/ portfolio }}
+				&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/section&gt;
 	&lt;/div&gt;
 	{{&gt; organisms-footer }}
 &lt;/div&gt;
+
+&lt;script&gt;
+var container = document.querySelector('#portfolio-filter');
+// init
+var iso;
+imagesLoaded( container, function() {
+  	iso  = new Isotope( container, {
+		itemSelector: '.project',
+		layoutMode: 'fitRows'
+	});
+});
+
+// Get the filter menu
+var filters = document.querySelectorAll('.nav--category a');
+for(var i = 0; i &lt; filters.length; i++) {
+	// If there's an attribute
+	if(filters[i].getAttribute('data-filter')){
+
+		// Initial state
+		if(filters[i].getAttribute('data-filter') === &quot;*&quot;){
+			filters[i].classList.toggle('active');
+		}
+		// Add click event
+	    filters[i].addEventListener(&quot;click&quot;, function(e){
+	    	e.preventDefault();
+	    	var filter_selector = &quot;*&quot;;
+	    	if(this.getAttribute('data-filter') !== &quot;*&quot;) {
+	    		filter_selector = '.project--' + this.getAttribute('data-filter');
+	    	}
+	    	// Filter action
+	    	iso.arrange({
+	    		filter: filter_selector
+	    	});
+
+	    	// Active class on the filter
+	    	var refilter = document.querySelectorAll('.nav--category a')
+	    	for (var i = 0; i &lt; refilter.length; i++) {
+			  refilter[i].classList.remove('active');
+			}
+	    	this.classList.add('active');
+	    });
+	}
+}
+&lt;/script&gt;
