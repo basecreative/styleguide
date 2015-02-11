@@ -103,13 +103,12 @@ window.matchMedia||(window.matchMedia=function(){"use strict";var a=window.style
 // @codekit-prepend "vendor/imagesloaded.min.js";
 
 
-yepnope({
-    test : Modernizr.mq('only all'),
-    nope : ['/styleguide/js/vendor/respond.js']
-});
 
 $(function(){
-
+	yepnope({
+	    test : Modernizr.mq('only all'),
+	    nope : ['/styleguide/js/vendor/respond.js']
+	});
 
 	if(Modernizr.mq("(max-width: 40em)")){
         yepnope({
