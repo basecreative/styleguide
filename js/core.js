@@ -13,14 +13,15 @@ $(function(){
 	    nope : ['/styleguide/js/vendor/respond.js']
 	});
 
-	if(Modernizr.mq("(max-width: 40em)")){
+	var mySlider = document.getElementById('slider');
+	if(Modernizr.mq("(max-width: 40em)") && mySlider !== undefined){
         yepnope({
           test : Modernizr.csstransforms,
           yep  : '/styleguide/js/vendor/swipe.js',
           complete: function(){
-            document.getElementById('slider').classList.add('swipe');
+            mySlider.classList.add('swipe');
 
-            window.mySwipe = Swipe(document.getElementById('slider'),{
+            window.mySwipe = Swipe(mySlider,{
                 disableScroll: false
             });
           }
