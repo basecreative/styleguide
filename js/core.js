@@ -8,7 +8,7 @@
 
 yepnope({
     test : Modernizr.mq('only all'),
-    nope : ['/patternlab/public/js/vendor/scripts/respond.js']
+    nope : ['js/vendor/respond.js']
 });
 
 $(function(){
@@ -17,7 +17,7 @@ $(function(){
 	if(Modernizr.mq("(max-width: 40em)")){
         yepnope({
           test : Modernizr.csstransforms,
-          yep  : '/patternlab/public/js/vendor/swipe.js',
+          yep  : 'js/vendor/swipe.js',
           complete: function(){
             document.getElementById('slider').classList.add('swipe');
 
