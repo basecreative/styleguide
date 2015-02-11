@@ -1,12 +1,32 @@
 // @codekit-prepend "vendor/modernizr.js";
 // @codekit-prepend "vendor/polyfiller.js";
 // @codekit-prepend "vendor/picturefill.min.js";
-// @codekit-prepend "vendor/respond.js";
 // @codekit-prepend "vendor/fixedfixed.js";
 // @codekit-prepend "vendor/isotope.min.js";
 // @codekit-prepend "vendor/imagesloaded.min.js";
 
+
+yepnope({
+    test : Modernizr.mq('only all'),
+    nope : ['/patternlab/public/js/vendor/scripts/respond.js']
+});
+
 $(function(){
+
+
+	if(Modernizr.mq("(max-width: 40em)")){
+        yepnope({
+          test : Modernizr.csstransforms,
+          yep  : '/patternlab/public/js/vendor/swipe.js',
+          complete: function(){
+            document.getElementById('slider').classList.add('swipe');
+
+            window.mySwipe = Swipe(document.getElementById('slider'),{
+                disableScroll: false
+            });
+          }
+        });
+    }
 
 	//Navigation toggle
 	$('.nav-toggle-menu').click(function(e) {
