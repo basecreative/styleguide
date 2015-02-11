@@ -105,7 +105,7 @@ window.matchMedia||(window.matchMedia=function(){"use strict";var a=window.style
 
 yepnope({
     test : Modernizr.mq('only all'),
-    nope : ['js/vendor/respond.js']
+    nope : ['/styleguide/js/vendor/respond.js']
 });
 
 $(function(){
@@ -114,7 +114,7 @@ $(function(){
 	if(Modernizr.mq("(max-width: 40em)")){
         yepnope({
           test : Modernizr.csstransforms,
-          yep  : 'js/vendor/swipe.js',
+          yep  : '/styleguide/js/vendor/swipe.js',
           complete: function(){
             document.getElementById('slider').classList.add('swipe');
 
