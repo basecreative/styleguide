@@ -240,6 +240,16 @@ var removeTheClass = function(el, className){
 	  el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
 };
 
+function addTheEventListener(el, eventName, handler) {
+  if (el.addEventListener) {
+    el.addEventListener(eventName, handler);
+  } else {
+    el.attachEvent('on' + eventName, function(){
+      handler.call(el);
+    });
+  }
+}
+
 var container = document.querySelector('#portfolio-filter');
 // init
 var iso;
@@ -261,7 +271,7 @@ for(var i = 0; i &lt; filters.length; i++) {
 			addTheClass(filters[i], 'active');
 		}
 		// Add click event
-	    filters[i].addEventListener(&quot;click&quot;, function(e){
+		addTheEventListener(filters[i], &quot;click&quot;, (function(e){
 	    	e.preventDefault();
 	    	var filter_selector = &quot;*&quot;;
 	    	if(this.getAttribute('data-filter') !== &quot;*&quot;) {
@@ -278,7 +288,7 @@ for(var i = 0; i &lt; filters.length; i++) {
 			  removeTheClass(refilter[i], 'active');
 			}
 			addTheClass(this, 'active');
-	    });
+	    }));
 	}
 }
 &lt;/script&gt;
