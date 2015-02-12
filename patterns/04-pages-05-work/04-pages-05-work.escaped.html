@@ -250,6 +250,11 @@ function addTheEventListener(el, eventName, handler) {
   }
 }
 
+var preventTheDefault = function(e){
+	if(e.preventDefault) e.preventDefault();
+	else event.returnValue = false;
+}
+
 var container = document.querySelector('#portfolio-filter');
 // init
 var iso;
@@ -272,7 +277,7 @@ for(var i = 0; i &lt; filters.length; i++) {
 		}
 		// Add click event
 		addTheEventListener(filters[i], &quot;click&quot;, (function(e){
-	    	e.preventDefault();
+	    	preventTheDefault(e);
 	    	var filter_selector = &quot;*&quot;;
 	    	if(this.getAttribute('data-filter') !== &quot;*&quot;) {
 	    		filter_selector = '.project--' + this.getAttribute('data-filter');
