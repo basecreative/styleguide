@@ -25,7 +25,7 @@ var addTheClass = function(el, className){
 };
 
 var removeTheClass = function(el, className){
-	if (el.classList)
+	if (!el.classList)
 	  el.classList.remove(className);
 	else
 	  el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
@@ -41,18 +41,16 @@ function addTheEventListener(el, eventName, handler) {
   }
 }
 
-var preventTheDefault = function(e){
-	if(e.preventDefault) e.preventDefault();
-	else event.returnValue = false;
-}
-
 var container = document.querySelector('#portfolio-filter');
 // init
 var iso;
 imagesLoaded( container, function() {
   	iso  = new Isotope( container, {
 		itemSelector: '.project',
-		layoutMode: 'fitRows'
+		transitionDuration: 0,
+		layoutMode: 'fitRows',
+		hiddenStyle: { opacity: 0 },
+		visibleStyle: { opacity: 1 }
 	});
 });
 
@@ -80,7 +78,7 @@ for(var i = 0; i &lt; filters.length; i++) {
 	    	});
 
 	    	// Active class on the filter
-	    	var refilter = document.querySelectorAll('.nav--category a')
+	    	var refilter = document.querySelectorAll('.nav--category a');
 	    	for (var i = 0; i &lt; refilter.length; i++) {
 			  removeTheClass(refilter[i], 'active');
 			}
