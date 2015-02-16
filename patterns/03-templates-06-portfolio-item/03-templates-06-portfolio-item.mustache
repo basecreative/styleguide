@@ -11,12 +11,11 @@
 				&lt;section class=&quot;section job__content&quot;&gt;
 					{{&gt; organisms-portfolio-content }}
 
-					&lt;p style=&quot; clear: both;&quot;&gt;
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus maxime rerum delectus adipisci eveniet, repellat ad neque.
-					&lt;/p&gt;
-					&lt;p style=&quot;font-size: .9em;&quot;&gt;
-						&lt;a href=&quot;#&quot; class=&quot;button button&quot; style=&quot;display: block;&quot;&gt;Get in touch&lt;/a&gt;
-					&lt;/p&gt;
+					&lt;div class=&quot;bg--darker context-widget&quot;&gt;
+						&lt;h3&gt;Would you like to work with us?&lt;/h3&gt;
+						&lt;p&gt;Talk to Iain Scott to get a picture of how we could work together.&lt;/p&gt;
+						&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Get in touch&lt;/a&gt;
+					&lt;/div&gt;
 				&lt;/section&gt;
 				&lt;aside class=&quot;job__aside&quot;&gt;
 					&lt;div class=&quot;job__pic job__extra&quot;&gt;
@@ -25,7 +24,9 @@
 					&lt;div class=&quot;job__pic job__extra&quot;&gt;
 						{{&gt; atoms-portfolio-secondary }}
 					&lt;/div&gt;
-					{{&gt; organisms-tag-list }}
+					&lt;div class=&quot;bg--darker context-widget&quot;&gt;
+						{{&gt; organisms-tag-list }}
+					&lt;/div&gt;
 				&lt;/aside&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -34,6 +35,7 @@
 	&lt;div class=&quot;bg--darker&quot;&gt;
 		&lt;div class=&quot;lc job__more&quot;&gt;
 			&lt;div class=&quot;lc--uneven project__related&quot;&gt;
+				{{&gt; molecules-portfolio-prevnext }}
 				&lt;h4 class=&quot;project__related__title&quot;&gt;Other related projects&lt;/h4&gt;
 				&lt;div class=&quot;project-list--related&quot;&gt;
 					{{# portfolio }}
