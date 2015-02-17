@@ -2344,7 +2344,7 @@
 		},
 	"\/js\/vendor\/fixedfixed.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/vendor\/fixedfixed.js",
 		"outputAbbreviatedPath": "\/js\/vendor\/min\/fixedfixed-min.js",
@@ -2498,7 +2498,7 @@
 		},
 	"\/js\/vendor\/respond.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/vendor\/respond.js",
 		"outputAbbreviatedPath": "\/js\/vendor\/min\/respond-min.js",
