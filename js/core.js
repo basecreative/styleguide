@@ -6,6 +6,13 @@
 // @codekit-prepend "vendor/responsive-map.js";
 
 
+// Respond
+yepnope({
+	test : Modernizr.mq('only all'),
+	nope : ['/styleguide/js/vendor/respond.js']
+});
+
+
 ready(function(){
 
 	var mySlider = document.querySelector('#slider');
@@ -22,11 +29,6 @@ ready(function(){
 		}
 	});
 
-	// Respond
-	yepnope({
-		test : Modernizr.mq('only all'),
-		nope : ['/styleguide/js/vendor/respond.js']
-	});
 
 	// Sliders
 	if(Modernizr.mq("(max-width: 40em)") && mySlider !== undefined){

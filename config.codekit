@@ -888,7 +888,7 @@
 		"outputAbbreviatedPath": "\/js\/core-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 0
 		},
 	"\/js\/init.js": {
