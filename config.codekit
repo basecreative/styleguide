@@ -2498,7 +2498,7 @@
 		},
 	"\/js\/vendor\/respond.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/vendor\/respond.js",
 		"outputAbbreviatedPath": "\/js\/vendor\/min\/respond-min.js",
