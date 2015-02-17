@@ -103,7 +103,7 @@ function addTheEventListener(el, eventName, handler) {
 // @codekit-prepend "vendor/responsive-map.js";
 
 
-ready(function(){
+(function(){
 
 	var mySlider = document.querySelector('#slider');
 	var navToggle = document.querySelector(".nav-toggle-menu");
@@ -131,7 +131,7 @@ ready(function(){
 			test : (Modernizr.csstransforms && Modernizr.csstransitions),
 			yep  : '/styleguide/js/vendor/swipe.js',
 			complete: function(){
-				if(Swipe !=== undefined) {
+				if(Swipe !== undefined) {
 					mySlider.classList.add('swipe');
 
 					window.mySwipe = Swipe(mySlider,{
@@ -142,5 +142,5 @@ ready(function(){
 		});
 	}
 
-});
+})();
 
