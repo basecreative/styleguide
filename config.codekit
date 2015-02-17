@@ -2487,7 +2487,7 @@
 		},
 	"\/js\/vendor\/polyfiller.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/vendor\/polyfiller.js",
 		"outputAbbreviatedPath": "\/js\/vendor\/min\/polyfiller-min.js",
@@ -2535,6 +2535,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/vendor\/tabs.js",
 		"outputAbbreviatedPath": "\/js\/vendor\/min\/tabs-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/vendor\/tiny.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/vendor\/tiny.js",
+		"outputAbbreviatedPath": "\/js\/vendor\/min\/tiny-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

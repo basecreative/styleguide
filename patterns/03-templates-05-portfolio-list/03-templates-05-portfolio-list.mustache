@@ -17,30 +17,6 @@
 
 &lt;script&gt;
 
-var addTheClass = function(el, className){
-	if (el.classList)
-	  el.classList.add(className);
-	else
-	  el.className += ' ' + className;
-};
-
-var removeTheClass = function(el, className){
-	if (!el.classList)
-	  el.classList.remove(className);
-	else
-	  el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-};
-
-function addTheEventListener(el, eventName, handler) {
-  if (el.addEventListener) {
-    el.addEventListener(eventName, handler);
-  } else {
-    el.attachEvent('on' + eventName, function(){
-      handler.call(el);
-    });
-  }
-}
-
 var container = document.querySelector('#portfolio-filter');
 // init
 var iso;
@@ -53,6 +29,7 @@ imagesLoaded( container, function() {
 		visibleStyle: { opacity: 1 }
 	});
 });
+
 
 // Get the filter menu
 var filters = document.querySelectorAll('.nav--category a');
