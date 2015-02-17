@@ -1,12 +1,12 @@
 
-var addTheClass = function(el, className){
+function addTheClass (el, className){
 	if (el.classList)
 	  el.classList.add(className);
 	else
 	  el.className += ' ' + className;
 };
 
-var removeTheClass = function(el, className){
+function removeTheClass(el, className){
 	if (!el.classList)
 	  el.classList.remove(className);
 	else
