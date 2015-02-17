@@ -4,6 +4,7 @@
 // @codekit-prepend "vendor/fixedfixed.js";
 // @codekit-prepend "vendor/isotope.min.js";
 // @codekit-prepend "vendor/imagesloaded.min.js";
+// @codekit-prepend "vendor/responsive-map.js";
 
 
 
