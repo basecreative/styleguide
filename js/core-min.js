@@ -112,6 +112,11 @@ yepnope({
 	nope : ['/styleguide/js/vendor/respond.js']
 });
 
+// Placeholders
+yepnope({
+	test : Modernizr.placeholder,
+	nope : ['/styleguide/js/vendor/span.js']
+});
 
 ready(function(){
 
