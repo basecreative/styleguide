@@ -96,7 +96,7 @@ ready(function(){
 
 			// Initial state
 			if(filters[i].getAttribute('data-filter') === &quot;*&quot;){
-				addTheClass(filters[i], 'active');
+				filters[i].classList.add('active');
 			}
 			// Add click event
 			addTheEventListener(filters[i], &quot;click&quot;, (function(e){
@@ -114,9 +114,9 @@ ready(function(){
 		    	// Active class on the filter
 		    	var refilter = document.querySelectorAll('.nav--category a');
 		    	for (var i = 0; i &lt; refilter.length; i++) {
-				  removeTheClass(refilter[i], 'active');
+				  refilter[i].classList.remove('active');
 				}
-				addTheClass(this, 'active');
+				this.classList.add('active');
 
 		    }));
 		}

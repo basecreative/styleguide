@@ -24,8 +24,8 @@ ready(function(){
 		var theTarget = document.querySelector(".off-canvas");
 
 		if(theTarget !== undefined){
-			toggleTheClass(this, 'active');
-			toggleTheClass(theTarget, 'active');
+			this.classList.toggle('active');
+			theTarget.classList.toggle('active');
 		}
 	});
 
