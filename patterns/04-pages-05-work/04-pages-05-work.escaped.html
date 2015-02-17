@@ -245,51 +245,53 @@
 
 &lt;script&gt;
 
-var container = document.querySelector('#portfolio-filter');
-// init
-var iso;
-imagesLoaded( container, function() {
-  	iso  = new Isotope( container, {
-		itemSelector: '.project',
-		transitionDuration: '.25s',
-		layoutMode: 'fitRows',
-		hiddenStyle: { opacity: 0 },
-		visibleStyle: { opacity: 1 }
+ready(function(){
+	var container = document.querySelector('#portfolio-filter');
+	// init
+	var iso;
+	imagesLoaded( container, function() {
+	  	iso  = new Isotope( container, {
+			itemSelector: '.project',
+			transitionDuration: '.25s',
+			layoutMode: 'fitRows',
+			hiddenStyle: { opacity: 0 },
+			visibleStyle: { opacity: 1 }
+		});
 	});
-});
 
 
-// Get the filter menu
-var filters = document.querySelectorAll('.nav--category a');
-for(var i = 0; i &lt; filters.length; i++) {
-	// If there's an attribute
-	if(filters[i].getAttribute('data-filter')){
+	// Get the filter menu
+	var filters = document.querySelectorAll('.nav--category a');
+	for(var i = 0; i &lt; filters.length; i++) {
+		// If there's an attribute
+		if(filters[i].getAttribute('data-filter')){
 
-		// Initial state
-		if(filters[i].getAttribute('data-filter') === &quot;*&quot;){
-			addTheClass(filters[i], 'active');
-		}
-		// Add click event
-		addTheEventListener(filters[i], &quot;click&quot;, (function(e){
-			(event.preventDefault) ? event.preventDefault() : event.returnValue = false; 
-
-	    	var filter_selector = &quot;*&quot;;
-	    	if(this.getAttribute('data-filter') !== &quot;*&quot;) {
-	    		filter_selector = '.project--' + this.getAttribute('data-filter');
-	    	}
-	    	// Filter action
-	    	iso.arrange({
-	    		filter: filter_selector
-	    	});
-
-	    	// Active class on the filter
-	    	var refilter = document.querySelectorAll('.nav--category a');
-	    	for (var i = 0; i &lt; refilter.length; i++) {
-			  removeTheClass(refilter[i], 'active');
+			// Initial state
+			if(filters[i].getAttribute('data-filter') === &quot;*&quot;){
+				addTheClass(filters[i], 'active');
 			}
-			addTheClass(this, 'active');
+			// Add click event
+			addTheEventListener(filters[i], &quot;click&quot;, (function(e){
+				(event.preventDefault) ? event.preventDefault() : event.returnValue = false; 
 
-	    }));
+		    	var filter_selector = &quot;*&quot;;
+		    	if(this.getAttribute('data-filter') !== &quot;*&quot;) {
+		    		filter_selector = '.project--' + this.getAttribute('data-filter');
+		    	}
+		    	// Filter action
+		    	iso.arrange({
+		    		filter: filter_selector
+		    	});
+
+		    	// Active class on the filter
+		    	var refilter = document.querySelectorAll('.nav--category a');
+		    	for (var i = 0; i &lt; refilter.length; i++) {
+				  removeTheClass(refilter[i], 'active');
+				}
+				addTheClass(this, 'active');
+
+		    }));
+		}
 	}
-}
+});
 &lt;/script&gt;
