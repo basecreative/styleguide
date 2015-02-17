@@ -6,7 +6,7 @@
 // @codekit-prepend "vendor/responsive-map.js";
 
 
-(function(){
+ready(function(){
 
 	var mySlider = document.querySelector('#slider');
 	var navToggle = document.querySelector(".nav-toggle-menu");
@@ -45,4 +45,4 @@
 		});
 	}
 
-})();
+});
