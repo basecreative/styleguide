@@ -98,6 +98,10 @@
 					map.style.width = map.offsetWidth + "px";
 					map.style.height = map.offsetHeight + "px";
 
+					if(map.offsetHeight<50){
+						map.style.height = "200px";
+					}
+
 					var mapOptions = {
 						zoom: parseInt(map.getAttribute('data-zoom')),
 						center: new google.maps.LatLng(parseFloat(map.getAttribute('data-latlng').split(',')[0]), parseFloat(map.getAttribute('data-latlng').split(',')[1])),
