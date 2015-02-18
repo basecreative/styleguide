@@ -1,9 +1,12 @@
+// @codekit-prepend "objects/reset.js";
+// @codekit-prepend "objects/tiny.js";
+// @codekit-prepend "objects/responsive-map.js";
+
 // @codekit-prepend "vendor/modernizr.js";
 // @codekit-prepend "vendor/picturefill.min.js";
 // @codekit-prepend "vendor/tiny.js";
 // @codekit-prepend "vendor/isotope.min.js";
 // @codekit-prepend "vendor/imagesloaded.min.js";
-// @codekit-prepend "vendor/responsive-map.js";
 
 
 // Respond
@@ -17,6 +20,7 @@ yepnope({
 	test : Modernizr.placeholder,
 	nope : ['/styleguide/js/vendor/span.js']
 });
+
 
 ready(function(){
 
