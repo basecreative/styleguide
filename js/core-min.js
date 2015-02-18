@@ -618,6 +618,11 @@ var addTheEventListener = function(el, eventName, handler) {
 				// Get maps (again since we are in the second call)
 				maps = get_maps();
 
+				// Just in case you're using respond
+				if(typeof respond !== "undefined"){
+					respond.update();
+				}
+
 				var styledMap = new google.maps.StyledMapType(styles,
    					{name: "Base Creative"});
 
