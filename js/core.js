@@ -22,7 +22,7 @@ yepnope({
 });
 
 
-ready(function(){
+ready(function(){		
 
 	var mySlider = document.querySelector('#slider');
 	var navToggle = document.querySelector(".nav-toggle-menu");

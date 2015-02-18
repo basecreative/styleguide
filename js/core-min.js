@@ -582,6 +582,9 @@ var addTheEventListener = function(el, eventName, handler) {
 				}
 			],
 			launch_maps = function(){
+
+				console.log("Loading API's scripts...")
+				
 				script.type = 'text/javascript';
 				script.defer = true;
 				script.async = true;
@@ -609,12 +612,15 @@ var addTheEventListener = function(el, eventName, handler) {
 
 				// Conditions
 				if(maps.some(function(map){
-				    return (sw > map.getAttribute('data-mq'));
+				    return (sw > parseInt(map.getAttribute('data-mq')));
 				})){
 					launch_maps(); // GO!!
 				}
 			},
 			initialize = function(){
+	
+				console.log("Initializing maps...")
+	
 				// Get maps (again since we are in the second call)
 				maps = get_maps();
 
@@ -671,10 +677,8 @@ var addTheEventListener = function(el, eventName, handler) {
 
 		// This needs updating... somehow
 		if(typeof google !== "undefined"){
-			console.log("Initializing maps...")
 			initialize();
 		}else{
-			console.log("Loading API's scripts...")
 			check_conditions();
 		}
 	};
@@ -738,7 +742,7 @@ yepnope({
 });
 
 
-ready(function(){
+ready(function(){		
 
 	var mySlider = document.querySelector('#slider');
 	var navToggle = document.querySelector(".nav-toggle-menu");

@@ -2551,6 +2551,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/vendor\/stickyfooter.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/vendor\/stickyfooter.js",
+		"outputAbbreviatedPath": "\/js\/vendor\/min\/stickyfooter-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/vendor\/swipe.js": {
 		"fileType": 64,
 		"ignore": 0,
