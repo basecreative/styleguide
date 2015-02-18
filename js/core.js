@@ -43,7 +43,7 @@ ready(function(){
 	if(Modernizr.mq("(max-width: 40em)") && mySlider !== undefined){
 		yepnope({
 			test : (Modernizr.csstransforms && Modernizr.csstransitions),
-			yep  : '/patternlab/public/js/vendor/swipe.js',
+			yep  : '/styleguide/js/vendor/swipe.js',
 			complete: function(){
 				if(Swipe !== undefined) {
 					mySlider.classList.add('swipe');
