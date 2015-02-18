@@ -535,7 +535,6 @@ var addTheEventListener = function(el, eventName, handler) {
 
 	var responsive_map = function(selector){
 		selector = selector || ".map--responsive";
-		console.log(maps);
 
 		var maps = maps || [],
 			mapIframe = [],
@@ -589,9 +588,22 @@ var addTheEventListener = function(el, eventName, handler) {
 				script.src = 'https://maps.googleapis.com/maps/api/js?v=3&callback=respMap';
 				document.body.appendChild(script);
 			},
+			get_maps = function(){	
+				var mapNodes = document.querySelectorAll(selector);
+		        var mapNodesLength = mapNodes.length;
+		        var mapArray = new Array();
+
+		        // NodeList into Array
+		        while (mapNodesLength--) {
+	                mapArray.push(mapNodes[mapNodesLength]);
+		        }
+
+				return mapArray;
+			},
 			check_conditions = function(){
 				// Get maps
-				maps = [].slice.call(document.querySelectorAll(selector));
+				maps = get_maps();
+
 				// Get screen width
 				sw = document.body.clientWidth;
 
@@ -603,8 +615,8 @@ var addTheEventListener = function(el, eventName, handler) {
 				}
 			},
 			initialize = function(){
-				console.log(maps);
-				maps = [].slice.call(document.querySelectorAll(selector));
+				// Get maps (again since we are in the second call)
+				maps = get_maps();
 
 				var styledMap = new google.maps.StyledMapType(styles,
    					{name: "Base Creative"});
@@ -642,7 +654,7 @@ var addTheEventListener = function(el, eventName, handler) {
 				});
 			};
 
-		// This needs updating
+		// This needs updating... somehow
 		if(typeof google !== "undefined"){
 			console.log("Initializing maps...")
 			initialize();
