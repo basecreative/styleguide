@@ -43,14 +43,52 @@ ready(function(){
 	if(Modernizr.mq("(max-width: 40em)") && mySlider !== undefined){
 		yepnope({
 			test : (Modernizr.csstransforms && Modernizr.csstransitions),
-			yep  : '/styleguide/js/vendor/swipe.js',
+			yep  : '/patternlab/public/js/vendor/swipe.js',
 			complete: function(){
 				if(Swipe !== undefined) {
 					mySlider.classList.add('swipe');
 
 					window.mySwipe = Swipe(mySlider,{
-						disableScroll: false
+						disableScroll: false, 
+						callback: function(ind){
+							var bullets = mySlider.querySelectorAll('.swipe__list li');
+							var current = bullets[ind];
+							var siblings = Array.prototype.slice.call(current.parentNode.children);
+
+							for (var i = siblings.length; i--;) {
+							  if (siblings[i] === current) {
+							    siblings.splice(i, 1);
+							    break;
+							  }
+							}	
+
+							for (var i = siblings.length; i--;) {
+							  siblings[i].classList.remove("on");
+							}	
+
+							current.classList.add("on");
+						}
 					});
+
+					// Populate bullet list
+					var bullet_list = document.querySelector('.swipe__list');
+					if(typeof bullet_list !== "undefined") {
+						for(var b = 0; b < mySwipe.getNumSlides(); b++){
+							// Create bullet
+							var bullet = document.createElement('li');
+							bullet.setAttribute('data-index', b);
+
+							// Attach onclick event
+							bullet.addEventListener("click", function(){
+								mySwipe.slide(parseInt(this.getAttribute('data-index')));
+							});
+
+							// Append
+							bullet_list.appendChild(bullet);
+						}
+						bullet_list.querySelector('li').classList.add('on');
+					}
+
 				}
 			}
 		});
