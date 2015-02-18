@@ -631,12 +631,13 @@ var addTheEventListener = function(el, eventName, handler) {
 					map.style.height = map.offsetHeight + "px";
 
 					if(map.offsetHeight<50){
-						map.style.height = "200px";
+						map.style.height = "120px";
 					}
 
 					var mapOptions = {
 						zoom: parseInt(map.getAttribute('data-zoom')),
 						center: new google.maps.LatLng(parseFloat(map.getAttribute('data-latlng').split(',')[0]), parseFloat(map.getAttribute('data-latlng').split(',')[1])),
+						scrollwheel: false,
 						mapTypeControlOptions: {
 					      mapTypeIds: ['map_style', google.maps.MapTypeId.ROADMAP]
 					    }
