@@ -631,13 +631,18 @@ var addTheEventListener = function(el, eventName, handler) {
 					map.style.height = map.offsetHeight + "px";
 
 					if(map.offsetHeight<50){
-						map.style.height = "120px";
+						map.style.height = "150px";
 					}
 
 					var mapOptions = {
 						zoom: parseInt(map.getAttribute('data-zoom')),
 						center: new google.maps.LatLng(parseFloat(map.getAttribute('data-latlng').split(',')[0]), parseFloat(map.getAttribute('data-latlng').split(',')[1])),
 						scrollwheel: false,
+						zoomControl: true,
+						zoomControlOptions: {
+							style: google.maps.ZoomControlStyle.SMALL
+						},
+						streetViewControl: false,
 						mapTypeControlOptions: {
 					      mapTypeIds: ['map_style', google.maps.MapTypeId.ROADMAP]
 					    }
@@ -669,7 +674,7 @@ var addTheEventListener = function(el, eventName, handler) {
 			console.log("Initializing maps...")
 			initialize();
 		}else{
-			console.log("Loading scripts...")
+			console.log("Loading API's scripts...")
 			check_conditions();
 		}
 	};

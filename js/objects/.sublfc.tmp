@@ -107,10 +107,6 @@
 						center: new google.maps.LatLng(parseFloat(map.getAttribute('data-latlng').split(',')[0]), parseFloat(map.getAttribute('data-latlng').split(',')[1])),
 						scrollwheel: false,
 						zoomControl: true,
-						zoomControlOptions: {
-							style: google.maps.ZoomControlStyle.SMALL
-						},
-						streetViewControl: false,
 						mapTypeControlOptions: {
 					      mapTypeIds: ['map_style', google.maps.MapTypeId.ROADMAP]
 					    }
