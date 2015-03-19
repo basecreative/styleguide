@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width" />
 	
-		<link rel="stylesheet" href="../../css/style.css?1426155790" media="all" />
+		<link rel="stylesheet" href="../../css/style.css?1426769017" media="all" />
 		
 
 		<!--
@@ -25,22 +25,25 @@
 		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 		<meta http-equiv="pragma" content="no-cache" />
 		
-		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1426155790" media="all">
-		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1426155790" media="all" />
+		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1426769017" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1426769017" media="all" />
 		
 
 		<!-- End Pattern Lab -->
 	
 	</head>
 	<body class="body">	
-		<img sizes="(min-width: 60em) 300px, (min-width: 40em) 50vw, 100vw" srcset="//placehold.it/260x260.jpg 260w, //placehold.it/320x320.jpg 320w, //placehold.it/640x640.jpg 640w, //placehold.it/1280x1280.jpg 1280w" alt="post cover" />
+		<picture>
+	<source media="(min-width: 40em)" sizes="(min-width: 60em) 320px, 48vw" srcset="//placehold.it/320x320/fff.jpg 320w, //placehold.it/640x640/fff.jpg 640w, //placehold.it/1280x1280/fff.jpg 1280w">
+	<img sizes="100vw"  alt="post cover" srcset="//placehold.it/320x160/fff.jpg 320w, //placehold.it/640x320/fff.jpg 640w" />
+</picture>
 	<!--DO NOT REMOVE-->
 		
 	<script>
 		// handle injection of items from PHP
 		var patternPartial = "atoms-post-cover";
 		var lineage        = [];
-		var lineageR       = [];
+		var lineageR       = [{"lineagePattern":"molecules-post-summary","lineagePath":"..\/..\/patterns\/01-molecules-02-blocks-04-post-summary\/01-molecules-02-blocks-04-post-summary.html"}];
 		var patternState   = "";
 		var cssEnabled     = false;
 	</script>
@@ -76,10 +79,10 @@
 			
 		}
 	</script>
-	<script id="pl-js-polyfill-insert-1426155790">
+	<script id="pl-js-polyfill-insert-1426769017">
 		(function() {
 			if (self != top) {
-				var cb = '1426155790';
+				var cb = '1426769017';
 				var js = [];
 				if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
 					js.push("styleguide/js/vendor/classlist-polyfill.js");
@@ -88,10 +91,10 @@
 			}
 		})();
 	</script>
-	<script id="pl-js-insert-1426155790">
+	<script id="pl-js-insert-1426769017">
 		(function() {
 			if (self != top) {
-				var cb = '1426155790';
+				var cb = '1426769017';
 				var js = [ { "src": "styleguide/js/vendor/jwerty.js", "dep": [ "styleguide/js/postmessage.js", { "src": "data/annotations.js", "dep": [ "styleguide/js/annotations-pattern.js" ] }, "styleguide/js/code-pattern.js" ] } ];
 				scriptLoader.run(js,cb,'pl-js-insert');
 			}
@@ -102,7 +105,7 @@
 
     
         <script>
-        !function(){"use strict";function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===e}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(o))c(localStorage.font_css_cache);else{var n=new XMLHttpRequest;n.open("GET",o,!0),e(n,"load",function(){4===n.readyState&&(c(n.responseText),localStorage.font_css_cache=n.responseText,localStorage.font_css_cache_file=o)}),n.send()}else{var a=document.createElement("link");a.href=o,a.rel="stylesheet",a.type="text/css",document.getElementsByTagName("head")[0].appendChild(a),document.cookie="font_css_cache"}}function c(e){var t=document.createElement("style");t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t)}var o="/patternlab/public/font.css";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}();
+        !function(){"use strict";function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===e}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(o))c(localStorage.font_css_cache);else{var n=new XMLHttpRequest;n.open("GET",o,!0),e(n,"load",function(){4===n.readyState&&(c(n.responseText),localStorage.font_css_cache=n.responseText,localStorage.font_css_cache_file=o)}),n.send()}else{var a=document.createElement("link");a.href=o,a.rel="stylesheet",a.type="text/css",document.getElementsByTagName("head")[0].appendChild(a),document.cookie="font_css_cache"}}function c(e){var t=document.createElement("style");t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t)}var o="/styleguide/font.css";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}();
         </script>
 
 	</body>

@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width" />
 	
-		<link rel="stylesheet" href="../../css/style.css?1426155790" media="all" />
+		<link rel="stylesheet" href="../../css/style.css?1426769017" media="all" />
 		
 
 		<!--
@@ -25,29 +25,54 @@
 		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 		<meta http-equiv="pragma" content="no-cache" />
 		
-		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1426155790" media="all">
-		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1426155790" media="all" />
+		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1426769017" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1426769017" media="all" />
 		
 
 		<!-- End Pattern Lab -->
 	
 	</head>
 	<body class="body">	
-		<div class="accordion">
-	<ul>
-		<li>
-			<a href="#" class="acc-handle">Accordion 1</a>
-			<div class="acc-panel">
+		<div class="filter">
+	<span class="filter__title">Filter</span>
+	<ul class="filter__panels">
+		<li class="filter__default">
+			<a href="#" class="filter__handle">Subjects</a>
+			<div class="fpanel">
+				<ul>
+					<li><a href="#">All</a></li>
+					<li><a href="#">Content Strategy</a></li>
+					<li><a href="#">Design</a></li>
+					<li><a href="#">Life &amp; culture</a></li>
+					<li><a href="#">Mobile</a></li>
+					<li><a href="#">Online marketing</a></li>
+				</ul>
 			</div>
 		</li>
 		<li>
-			<a href="#" class="acc-handle">Accordion 2</a>
-			<div class="acc-panel">
+			<a href="#" class="filter__handle">Authors</a>
+			<div class="fpanel">
+				<ul>
+					<li><a href="#">Item</a></li>
+					<li><a href="#">Item</a></li>
+					<li><a href="#">Item</a></li>
+					<li><a href="#">Item</a></li>
+					<li><a href="#">Item</a></li>
+					<li><a href="#">Item</a></li>
+				</ul>
 			</div>
 		</li>
 		<li>
-			<a href="#" class="acc-handle">Accordion 3</a>
-			<div class="acc-panel">
+			<a href="#" class="filter__handle">Dates</a>
+			<div class="fpanel">
+				<ul>
+					<li><a href="#">Item</a></li>
+					<li><a href="#">Item</a></li>
+					<li><a href="#">Item</a></li>
+					<li><a href="#">Item</a></li>
+					<li><a href="#">Item</a></li>
+					<li><a href="#">Item</a></li>
+				</ul>
 			</div>
 		</li>
 	</ul>
@@ -56,7 +81,7 @@
 		
 	<script>
 		// handle injection of items from PHP
-		var patternPartial = "molecules-accordion";
+		var patternPartial = "molecules-filter";
 		var lineage        = [];
 		var lineageR       = [];
 		var patternState   = "";
@@ -94,10 +119,10 @@
 			
 		}
 	</script>
-	<script id="pl-js-polyfill-insert-1426155790">
+	<script id="pl-js-polyfill-insert-1426769017">
 		(function() {
 			if (self != top) {
-				var cb = '1426155790';
+				var cb = '1426769017';
 				var js = [];
 				if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
 					js.push("styleguide/js/vendor/classlist-polyfill.js");
@@ -106,10 +131,10 @@
 			}
 		})();
 	</script>
-	<script id="pl-js-insert-1426155790">
+	<script id="pl-js-insert-1426769017">
 		(function() {
 			if (self != top) {
-				var cb = '1426155790';
+				var cb = '1426769017';
 				var js = [ { "src": "styleguide/js/vendor/jwerty.js", "dep": [ "styleguide/js/postmessage.js", { "src": "data/annotations.js", "dep": [ "styleguide/js/annotations-pattern.js" ] }, "styleguide/js/code-pattern.js" ] } ];
 				scriptLoader.run(js,cb,'pl-js-insert');
 			}
@@ -120,7 +145,7 @@
 
     
         <script>
-        !function(){"use strict";function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===e}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(o))c(localStorage.font_css_cache);else{var n=new XMLHttpRequest;n.open("GET",o,!0),e(n,"load",function(){4===n.readyState&&(c(n.responseText),localStorage.font_css_cache=n.responseText,localStorage.font_css_cache_file=o)}),n.send()}else{var a=document.createElement("link");a.href=o,a.rel="stylesheet",a.type="text/css",document.getElementsByTagName("head")[0].appendChild(a),document.cookie="font_css_cache"}}function c(e){var t=document.createElement("style");t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t)}var o="/patternlab/public/font.css";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}();
+        !function(){"use strict";function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===e}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(o))c(localStorage.font_css_cache);else{var n=new XMLHttpRequest;n.open("GET",o,!0),e(n,"load",function(){4===n.readyState&&(c(n.responseText),localStorage.font_css_cache=n.responseText,localStorage.font_css_cache_file=o)}),n.send()}else{var a=document.createElement("link");a.href=o,a.rel="stylesheet",a.type="text/css",document.getElementsByTagName("head")[0].appendChild(a),document.cookie="font_css_cache"}}function c(e){var t=document.createElement("style");t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t)}var o="/styleguide/font.css";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}();
         </script>
 
 	</body>
