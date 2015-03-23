@@ -746,6 +746,7 @@ ready(function(){
 
 	var mySlider = document.querySelector('#slider');
 	var navToggle = document.querySelector(".nav-toggle-menu");
+	var filter = document.querySelector(".filter");
 
 	// Toggle nav
 	addTheEventListener(navToggle, "click", function(e){
@@ -813,6 +814,7 @@ ready(function(){
 			}
 		});
 	}
+
 
 });
 

@@ -1,10 +1,17 @@
 &lt;div class=&quot;page&quot; id=&quot;page&quot;&gt;
 	{{&gt; organisms-header }}
-	&lt;div role=&quot;main&quot;&gt;
+	&lt;div role=&quot;main blog&quot;&gt;
 
 		{{&gt; molecules-heading-group }}
 
-		{{&gt; organisms-news-list }}
+		&lt;div class=&quot;blog lc&quot;&gt;
+			&lt;aside class=&quot;blog__sidebar&quot;&gt;
+				{{&gt; molecules-filter }}
+			&lt;/aside&gt;
+			&lt;section class=&quot;blog__content section&quot;&gt;
+				{{&gt; organisms-news-list }}
+			&lt;/section&gt;
+		&lt;/div&gt;
 
 	&lt;/div&gt;&lt;!--End role=main--&gt;
 	{{&gt; organisms-footer }}
