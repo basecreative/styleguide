@@ -391,8 +391,7 @@ textarea {
   position: absolute;
   top: .1em;
   bottom: .1em;
-  right: .1em;
-  background: #fff; }
+  right: .1em; }
 
 .field {
   margin-bottom: 1em; }

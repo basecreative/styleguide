@@ -1,0 +1,67 @@
+&lt;div class=&quot;page&quot; id=&quot;page&quot;&gt;
+	{{&gt; organisms-header }}
+	&lt;div role=&quot;main&quot;&gt;
+		{{&gt; organisms-portfolio-navigation }}
+		&lt;div class=&quot;job&quot;&gt;			
+			{{&gt; molecules-portfolio-item-heading }}
+			&lt;div class=&quot;job__hero&quot;&gt;
+				&lt;div id=&quot;slider&quot;&gt;
+					&lt;div class=&quot;swipe__wrap&quot;&gt;
+						&lt;div class=&quot;job__pic&quot;&gt;
+							{{&gt; atoms-portfolio-primary }}
+							{{&gt; molecules-share-pinterest }}
+						&lt;/div&gt;
+						&lt;div class=&quot;job__pic&quot;&gt;
+							{{&gt; atoms-portfolio-primary }}
+							{{&gt; molecules-share-pinterest }}
+						&lt;/div&gt;
+						&lt;div class=&quot;job__pic&quot;&gt;
+							{{&gt; atoms-portfolio-primary }}
+							{{&gt; molecules-share-pinterest }}
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;ol class=&quot;swipe__list&quot;&gt;
+					&lt;/ol&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;lc--uneven&quot;&gt;
+				&lt;section class=&quot;section job__content&quot;&gt;
+					{{&gt; organisms-portfolio-content }}
+
+					{{&gt; molecules-visit-site }}
+					{{&gt; molecules-contact-us }}
+				&lt;/section&gt;
+				&lt;aside class=&quot;job__aside&quot;&gt;
+					&lt;div class=&quot;job__pic job__extra&quot;&gt;
+						{{&gt; atoms-portfolio-secondary }}
+						{{&gt; molecules-share-pinterest }}
+					&lt;/div&gt;
+					&lt;div class=&quot;job__pic job__extra&quot;&gt;
+						{{&gt; atoms-portfolio-secondary }}
+						{{&gt; molecules-share-pinterest }}
+					&lt;/div&gt;
+					&lt;div class=&quot;bg--darker context-widget&quot;&gt;
+						&lt;div class=&quot;text&quot;&gt;
+							{{&gt; organisms-tag-list }}
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/aside&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;bg--darker&quot;&gt;
+		&lt;div class=&quot;lc job__more&quot;&gt;
+			&lt;div class=&quot;lc--uneven project__related&quot;&gt;
+				{{&gt; molecules-portfolio-prevnext }}
+				&lt;h4 class=&quot;project__related__title&quot;&gt;Other related projects&lt;/h4&gt;
+				&lt;div class=&quot;project-list--related&quot;&gt;
+					{{# portfolio }}
+						{{&gt; molecules-portfolio-item }}
+					{{/ portfolio }}
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	{{&gt; organisms-footer }}
+&lt;/div&gt;

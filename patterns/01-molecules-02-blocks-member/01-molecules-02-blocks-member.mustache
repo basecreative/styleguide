@@ -1,0 +1,12 @@
+&lt;figure class=&quot;member&quot;&gt;
+	{{&gt; atoms-member-photo }}
+	&lt;figcaption class=&quot;member__data&quot;&gt;
+		&lt;h3 class=&quot;member__name&quot;&gt;{{ name }}&lt;/h3&gt;
+		&lt;p class=&quot;member__role&quot;&gt;{{ role }}&lt;/p&gt;
+	&lt;/figcaption&gt;
+	&lt;div class=&quot;member__social&quot;&gt;
+		{{# social }}
+			&lt;a href=&quot;{{ url }}/{{ handler }}&quot; class=&quot;member__link icon icon--{{ name }}&quot;&gt;&lt;span class=&quot;icon__text&quot;&gt;{{ name }}&lt;/span&gt;&lt;/a&gt;
+		{{/ social }}
+	&lt;/div&gt;
+&lt;/figure&gt;

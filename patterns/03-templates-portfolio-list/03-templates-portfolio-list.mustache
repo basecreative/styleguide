@@ -1,0 +1,69 @@
+&lt;div class=&quot;page&quot; id=&quot;page&quot;&gt;
+	{{&gt; organisms-header }}
+	&lt;div role=&quot;main&quot;&gt;
+		{{&gt; molecules-portfolio-nav }}
+		&lt;section class=&quot;section&quot;&gt;
+			&lt;div class=&quot;project-list&quot;&gt;
+				&lt;div id=&quot;portfolio-filter&quot;&gt;
+					{{# portfolio }}
+						{{&gt; molecules-portfolio-item }}
+					{{/ portfolio }}
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/section&gt;
+		&lt;span class=&quot;push&quot;&gt;&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+{{&gt; organisms-footer }}
+
+&lt;script&gt;
+ready(function(){
+	var container = document.querySelector('#portfolio-filter');
+	// init
+	var iso;
+	imagesLoaded( container, function() {
+	  	iso  = new Isotope( container, {
+			itemSelector: '.project',
+			transitionDuration: '.25s',
+			layoutMode: 'fitRows',
+			hiddenStyle: { opacity: 0 },
+			visibleStyle: { opacity: 1 }
+		});
+	});
+
+
+	// Get the filter menu
+	var filters = document.querySelectorAll('.nav--category a');
+	for(var i = 0; i &lt; filters.length; i++) {
+		// If there's an attribute
+		if(filters[i].getAttribute('data-filter')){
+
+			// Initial state
+			if(filters[i].getAttribute('data-filter') === &quot;*&quot;){
+				filters[i].classList.add('active');
+			}
+			// Add click event
+			addTheEventListener(filters[i], &quot;click&quot;, (function(e){
+				(event.preventDefault) ? event.preventDefault() : event.returnValue = false; 
+
+		    	var filter_selector = &quot;*&quot;;
+		    	if(this.getAttribute('data-filter') !== &quot;*&quot;) {
+		    		filter_selector = '.project--' + this.getAttribute('data-filter');
+		    	}
+		    	// Filter action
+		    	iso.arrange({
+		    		filter: filter_selector
+		    	});
+
+		    	// Active class on the filter
+		    	var refilter = document.querySelectorAll('.nav--category a');
+		    	for (var i = 0; i &lt; refilter.length; i++) {
+				  refilter[i].classList.remove('active');
+				}
+				this.classList.add('active');
+
+		    }));
+		}
+	}
+});
+&lt;/script&gt;
