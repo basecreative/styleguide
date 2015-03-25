@@ -15,8 +15,6 @@
 \*------------------------------------*/
 /* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/ */
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
@@ -151,18 +149,23 @@ a {
 
 .titled-list a,
 .iconed-list a,
-.job__content .text a {
+.job__content .text a,
+.context-widget--visit__url {
   color: #898D86;
   text-decoration: none;
   border-bottom: 1px dotted #a5a7a3;
-  transition: .35s all; }
+  -webkit-transition: .35s all;
+          transition: .35s all; }
   .titled-list a:hover, .titled-list a:focus, .titled-list a:active,
   .iconed-list a:hover,
   .iconed-list a:focus,
   .iconed-list a:active,
   .job__content .text a:hover,
   .job__content .text a:focus,
-  .job__content .text a:active {
+  .job__content .text a:active,
+  .context-widget--visit__url:hover,
+  .context-widget--visit__url:focus,
+  .context-widget--visit__url:active {
     color: #5A5F55;
     border-bottom-color: #898D86; }
 
@@ -379,7 +382,8 @@ mark {
     padding-top: 13vw;
     font-size: 1.25vw;
     opacity: 0;
-    transition: .5s all; }
+    -webkit-transition: .5s all;
+            transition: .5s all; }
     .csstransitions .fluixd__overlay .job__description {
       width: 18em;
       margin-left: auto;
@@ -387,7 +391,8 @@ mark {
   .csstransitions .fluixd__img {
     position: relative; }
     .csstransitions .fluixd__img:hover .fluixd__overlay, .csstransitions .fluixd__img:focus .fluixd__overlay, .csstransitions .fluixd__img:active .fluixd__overlay {
-      transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
       opacity: 1; } }
 @media (min-width: 30em) {
   .fluixd--left .fluixd__img {
@@ -582,7 +587,8 @@ mark {
   margin-right: .25em;
   width: 1em !important;
   height: 1em !important;
-  transition: .25s all; }
+  -webkit-transition: .25s all;
+          transition: .25s all; }
   .nav-toggle.active {
     color: #fff; }
   .nav-toggle:hover, .nav-toggle:focus, .nav-toggle:active {
@@ -673,7 +679,8 @@ mark {
     padding: 1em;
     width: 100%;
     border-bottom: 0.1em solid #4a4f54;
-    transition: .25s all; }
+    -webkit-transition: .25s all;
+            transition: .25s all; }
     .nav--main a:hover, .nav--main a:active, .nav--main a:focus {
       color: #FBF7E5; }
   .nav--main li.active a {
@@ -739,7 +746,8 @@ mark {
         float: left;
         width: 50%; }
       .nav--category a {
-        transition: .25s all; }
+        -webkit-transition: .25s all;
+                transition: .25s all; }
         .nav--category a.active {
           background: #898D86;
           color: #FBF7E5; } }
@@ -777,14 +785,17 @@ mark {
           margin-right: .35em;
           margin-bottom: -.3em;
           border: 0.3em solid #888C85;
-          transition: .5s box-shadow, .55s background, .55s border-color;
+          -webkit-transition: .5s box-shadow, .55s background, .55s border-color;
+                  transition: .5s box-shadow, .55s background, .55s border-color;
           box-shadow: inset 0 0 #888C85; }
         .nav--category a:hover:before, .nav--category a:focus:before, .nav--category a:active:before {
-          transition: .75s box-shadow, .8s background, .8s border-color;
+          -webkit-transition: .75s box-shadow, .8s background, .8s border-color;
+                  transition: .75s box-shadow, .8s background, .8s border-color;
           box-shadow: inset 0 0 0 1em #888C85;
           background: #888C85; }
       .nav--category a.active:before {
-        transition: 0s box-shadow, .5s background, .5s border-color;
+        -webkit-transition: 0s box-shadow, .5s background, .5s border-color;
+                transition: 0s box-shadow, .5s background, .5s border-color;
         box-shadow: inset 0 0 #888C85;
         background: #6B736D;
         border-color: #6B736D; } }
@@ -812,7 +823,8 @@ mark {
   .nav--footer a {
     display: block;
     color: #FBF7E5 !important;
-    transition: .2s all; }
+    -webkit-transition: .2s all;
+            transition: .2s all; }
     .nav--footer a.icon--twitter:hover {
       color: #00ACED !important; }
     .nav--footer a.icon--facebook:hover {
@@ -992,7 +1004,8 @@ mark {
   top: -1em;
   margin: 0 -1em 1em -1em;
   max-height: 0;
-  transition: all .25s ease-in; }
+  -webkit-transition: all .25s ease-in;
+          transition: all .25s ease-in; }
   .csstransitions .off-canvas.active {
     max-height: 22em; }
   @media (min-width: 40em) {
