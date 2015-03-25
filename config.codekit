@@ -13,6 +13,15 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
+	"\/critical.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/critical.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/css\/editor-style.css": {
 		"fileType": 16,
 		"ignore": 1,
