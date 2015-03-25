@@ -138,14 +138,19 @@ a {
     color: #35332E; }
 
 .titled-list a,
-.iconed-list a {
+.iconed-list a,
+.job__content .text a {
   color: #898D86;
+  text-decoration: none;
   border-bottom: 1px dotted #a5a7a3;
   transition: .35s all; }
   .titled-list a:hover, .titled-list a:focus, .titled-list a:active,
   .iconed-list a:hover,
   .iconed-list a:focus,
-  .iconed-list a:active {
+  .iconed-list a:active,
+  .job__content .text a:hover,
+  .job__content .text a:focus,
+  .job__content .text a:active {
     color: #5A5F55;
     border-bottom-color: #898D86; }
 
