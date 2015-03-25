@@ -635,8 +635,7 @@ button, input[type="submit"],
 
 .quote--client cite {
   color: #5A5F55; }
-  .quote--client cite:before {
-    content: "Client ";
+  .quote--client cite .quote--client__role {
     color: #898D86; }
 
 .social-share {
